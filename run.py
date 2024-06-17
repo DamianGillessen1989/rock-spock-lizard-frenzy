@@ -104,7 +104,13 @@ def main():
     computer_score = 0
 
     print("Welcome to Rock-Paper-Scissors-Lizard-Spock!")
-    rounds = int(input("How many rounds would you like to play? Best of: "))
+    
+    while True:
+        try:
+            rounds = int(input("How many rounds would you like to play? Best of: "))
+            break
+        except ValueError:
+            print("Please choose a number.")
 
     for _ in range(rounds):
         player_choice = input("\nEnter your choice (rock, spock, paper, lizard, scissors) or type 'exit' to quit the game: ").strip().lower()

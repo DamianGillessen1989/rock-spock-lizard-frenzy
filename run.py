@@ -1,5 +1,34 @@
 import random
 
+def name_to_number(name):
+    name = name.lower()
+    if name == "rock":
+        return 0
+    elif name == "spock":
+        return 1
+    elif name == "paper":
+        return 2
+    elif name == "lizard":
+        return 3
+    elif name == "scissors":
+        return 4
+    else:
+        return -1
+
+def number_to_name(number):
+    if number == 0:
+        return "Rock"
+    elif number == 1:
+        return "Spock"
+    elif number == 2:
+        return "Paper"
+    elif number == 3:
+        return "Lizard"
+    elif number == 4:
+        return "Scissors"
+    else:
+        return "Invalid Input"
+
 def main():
     print("Welcome to Rock-Paper-Scissors-Lizard-Spock!")
     
@@ -23,10 +52,8 @@ def main():
             print("Invalid input. Please enter a valid choice like 'Spock'.")
             print("And check your spelling!")
 
-        # Print current scores
         print("\nCurrent Scores - Player: {}, Computer: {}".format(player_score, computer_score))
 
-    # Final scores and result
     print("Final Scores - Player: {}, Computer: {}".format(player_score, computer_score))
     if player_score > computer_score:
         print("Congratulations! You won the game!")

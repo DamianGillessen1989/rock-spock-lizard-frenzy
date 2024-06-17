@@ -65,6 +65,39 @@ def detailed_feedback(player_choice, comp_choice, outcome):
     else:
         return "Computer wins! " + win_scenarios.get((comp_choice, player_choice), "")
 
+def rpsls(player_choice, player_score, computer_score): 
+    print()
+    print("Player chooses", player_choice, "\n")
+    player_number = name_to_number(player_choice)
+    if player_number == -1:
+        print("Invalid player choice. Game cannot proceed.")
+        return player_score, computer_score
+
+    comp_number = random.randrange(0, 5)
+    comp_choice = number_to_name(comp_number)
+    print("Computer chooses", comp_choice, "\n")
+
+    diff = (comp_number - player_number) % 5
+
+    if diff == 0:
+        outcome = "tie"
+        print("It's a tie!")
+    elif diff in [1, 2]:
+        outcome = "computer"
+        computer_score += 1
+        print("Computer wins!")
+        print(random.choice(taunts))
+    else:
+        outcome = "player"
+        player_score += 1
+        print("Player wins!")
+        print(random.choice(encouragements))
+
+    feedback = detailed_feedback(player_choice, comp_choice, outcome)
+    print(feedback)
+
+    return player_score, computer_score
+
 def main():
     print("Welcome to Rock-Paper-Scissors-Lizard-Spock!")
     

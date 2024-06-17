@@ -29,6 +29,26 @@ def number_to_name(number):
     else:
         return "Invalid Input"
 
+def detailed_feedback(player_choice, comp_choice, outcome):
+    win_scenarios = {
+        ("rock", "scissors"): "Rock crushes Scissors!",
+        ("rock", "lizard"): "Rock crushes Lizard!",
+        ("spock", "scissors"): "Spock smashes Scissors!",
+        ("spock", "rock"): "Spock vaporizes Rock!",
+        ("paper", "rock"): "Paper covers Rock!",
+        ("paper", "spock"): "Paper disproves Spock!",
+        ("lizard", "spock"): "Lizard poisons Spock!",
+        ("lizard", "paper"): "Lizard eats Paper!",
+        ("scissors", "paper"): "Scissors cuts Paper!",
+        ("scissors", "lizard"): "Scissors decapitates Lizard!"
+    }
+    if outcome == "tie":
+        return "Both chose {}.".format(player_choice)
+    elif outcome == "player":
+        return "Player wins! " + win_scenarios.get((player_choice, comp_choice), "")
+    else:
+        return "Computer wins! " + win_scenarios.get((comp_choice, player_choice), "")
+
 def main():
     print("Welcome to Rock-Paper-Scissors-Lizard-Spock!")
     

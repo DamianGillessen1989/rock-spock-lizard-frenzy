@@ -99,14 +99,12 @@ def rpsls(player_choice, player_score, computer_score):
     return player_score, computer_score
 
 def main():
-    print("Welcome to Rock-Paper-Scissors-Lizard-Spock!")
-    
+    choices = ["rock", "spock", "paper", "lizard", "scissors"]
     player_score = 0
     computer_score = 0
-    
+
+    print("Welcome to Rock-Paper-Scissors-Lizard-Spock!")
     rounds = int(input("How many rounds would you like to play? Best of: "))
-    
-    choices = ["rock", "spock", "paper", "lizard", "scissors"]
 
     for _ in range(rounds):
         player_choice = input("\nEnter your choice (rock, spock, paper, lizard, scissors) or type 'exit' to quit the game: ").strip().lower()
@@ -115,21 +113,20 @@ def main():
             break
         
         if player_choice in choices:
-            # Game logic will go here
-            pass
+            player_score, computer_score = rpsls(player_choice, player_score, computer_score)
         else:
             print("Invalid input. Please enter a valid choice like 'Spock'.")
             print("And check your spelling!")
 
         print("\nCurrent Scores - Player: {}, Computer: {}".format(player_score, computer_score))
 
-    print("Final Scores - Player: {}, Computer: {}".format(player_score, computer_score))
+    print("Final Scores - Player: {}, Computer: {}".format(player_score, computer_score), "\n")
     if player_score > computer_score:
-        print("Congratulations! You won the game!")
+        print("Congratulations! You won the game!", "\n")
     elif player_score < computer_score:
-        print("Computer wins the game! Better luck next time!")
+        print("Computer wins the game! Better luck next time!", "\n")
     else:
-        print("It's a tie game! Well played!")
+        print("It's a tie game! Well played!", "\n")
 
 if __name__ == "__main__":
     main()

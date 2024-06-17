@@ -61,13 +61,13 @@ def detailed_feedback(player_choice, comp_choice, outcome):
     if outcome == "tie":
         return "Both chose {}.".format(player_choice)
     elif outcome == "player":
-        return "Player wins! " + win_scenarios.get((player_choice, comp_choice), "")
+        return "Player wins!\n" + win_scenarios.get((player_choice, comp_choice), "")
     else:
-        return "Computer wins! " + win_scenarios.get((comp_choice, player_choice), "")
+        return "Computer wins!\n" + win_scenarios.get((comp_choice, player_choice), "")
 
 def rpsls(player_choice, player_score, computer_score): 
     print()
-    print("Player chooses", player_choice, "\n")
+    print("Player chooses", player_choice.capitalize())
     player_number = name_to_number(player_choice)
     if player_number == -1:
         print("Invalid player choice. Game cannot proceed.")
@@ -75,7 +75,7 @@ def rpsls(player_choice, player_score, computer_score):
 
     comp_number = random.randrange(0, 5)
     comp_choice = number_to_name(comp_number)
-    print("Computer chooses", comp_choice, "\n")
+    print("Computer chooses", comp_choice)
 
     diff = (comp_number - player_number) % 5
 
@@ -104,16 +104,13 @@ def main():
     computer_score = 0
 
     print("Welcome to Rock-Paper-Scissors-Lizard-Spock!")
-    
-    while True:
-        try:
-            rounds = int(input("How many rounds would you like to play? Best of: "))
-            if rounds <= 0:
-                print("Please choose a positive number.")
-                continue
-            break
-        except ValueError:
-            print("Please choose a number.")
+    rounds = input("How many rounds would you like to play? Best of: ")
+
+    while not rounds.isdigit():
+        print("Please choose a number.")
+        rounds = input("How many rounds would you like to play? Best of: ")
+
+    rounds = int(rounds)
 
     for _ in range(rounds):
         player_choice = input("\nEnter your choice (rock, spock, paper, lizard, scissors) or type 'exit' to quit the game: ").strip().lower()
@@ -129,13 +126,13 @@ def main():
 
         print("\nCurrent Scores - Player: {}, Computer: {}".format(player_score, computer_score))
 
-    print("Final Scores - Player: {}, Computer: {}".format(player_score, computer_score), "\n")
+    print("\nFinal Scores - Player: {}, Computer: {}".format(player_score, computer_score))
     if player_score > computer_score:
-        print("Congratulations! You won the game!", "\n")
+        print("Congratulations! You won the game!")
     elif player_score < computer_score:
-        print("Computer wins the game! Better luck next time!", "\n")
+        print("Computer wins the game! Better luck next time!")
     else:
-        print("It's a tie game! Well played!", "\n")
+        print("It's a tie game! Well played!")
 
 if __name__ == "__main__":
     main()

@@ -1,5 +1,21 @@
 import random
 
+encouragements = [
+    "Great job!",
+    "You're on fire!",
+    "Keep it up!",
+    "You're unstoppable!",
+    "Well played!"
+]
+
+taunts = [
+    "Better luck next time, loser!",
+    "Oh, did that hurt?",
+    "Is that all you've got?",
+    "Try harder, you might win someday!",
+    "Pathetic effort, really."
+]
+
 def name_to_number(name):
     name = name.lower()
     if name == "rock":

@@ -108,6 +108,9 @@ def main():
     while True:
         try:
             rounds = int(input("How many rounds would you like to play? Best of: "))
+            if rounds <= 0:
+                print("Please choose a positive number.")
+                continue
             break
         except ValueError:
             print("Please choose a number.")

@@ -125,16 +125,16 @@ def game_mechanics(player_choice, player_score, computer_score):
 
     if diff == 0:
         outcome = "tie"
-        print("It's a tie!")
+        print("It's a tie! xxx")
     elif diff in [1, 2]:
         outcome = "computer"
         computer_score += 1
-        print("Computer wins!")
+        print("Computer wins! xxx")
         print(random.choice(taunts))
     else:
         outcome = "player"
         player_score += 1
-        print("Player wins!")
+        print("Player wins! xxx")
         print(random.choice(encouragements))
 
     feedback = detailed_feedback(player_choice, comp_choice, outcome)
@@ -148,44 +148,59 @@ def main():
     The main function to run the Rock-Paper-Scissors-Lizard-Spock game.
     Prompts the user to enter the number of rounds and manages the game flow.
     """
-    choices = ["rock", "spock", "paper", "lizard", "scissors"]
-    player_score = 0
-    computer_score = 0
+    while True:
+        choices = ["rock", "spock", "paper", "lizard", "scissors"]
+        player_score = 0
+        computer_score = 0
 
-    print("Welcome to Rock-Paper-Scissors-Lizard-Spock!")
-    rounds = input("How many rounds would you like to play? Best of: ")
-
-    while not rounds.isdigit():
-        print("Please choose a number.")
+        print("Welcome to Rock-Paper-Scissors-Lizard-Spock!")
         rounds = input("How many rounds would you like to play? Best of: ")
 
-    rounds = int(rounds)
+        while not rounds.isdigit():
+            print("Please choose a number.")
+            rounds = input("How many rounds would you like to play? Best of: ")
 
-    for _ in range(rounds):
-        player_choice = input("\nEnter your choice "
-                              "(Rock, Spock, Paper, Lizard, Scissors)"
-                              " or type 'exit' to quit the game: "
-                              ).strip().lower()
-        if player_choice == 'exit':
-            break
-        if player_choice in choices:
-            player_score, computer_score = game_mechanics(
-                player_choice, player_score, computer_score)
-        else:
-            print("Invalid input. Please enter a valid choice like 'Spock'.")
-            print("And check your spelling!")
+        rounds = int(rounds)
 
-        print("\nCurrent Scores - Player: {}, Computer: {}".format(
+        for _ in range(rounds):
+            player_choice = input("\nEnter your choice "
+                                  "(Rock, Spock, Paper, Lizard, Scissors)"
+                                  " or type 'exit' to quit the game: "
+                                  ).strip().lower()
+            if player_choice in ['exit', 'quit']:
+                print("\nThank you for playing Rock, Paper, Scissors, "
+                      "Lizard, Spock.\n" "\nIf you want to check out my other "
+                      "work visit: https://github.com/DamianGillessen1989\n"
+                      "\nLive long, and Prosper.\n")
+                return
+            if player_choice in choices:
+                player_score, computer_score = game_mechanics(
+                    player_choice, player_score, computer_score)
+            else:
+                print("Invalid input. Please enter a valid choice ")
+                print("like 'Spock'. And check your spelling!")
+
+            print("\nCurrent Scores - Player: {}, Computer: {}".format(
+                player_score, computer_score))
+
+        print("\nFinal Scores - Player: {}, Computer: {}".format(
             player_score, computer_score))
+        if player_score > computer_score:
+            print("Congratulations! You won the game!")
+        elif player_score < computer_score:
+            print("Computer wins the game! Better luck next time!")
+        else:
+            print("It's a tie game! Well played!")
 
-    print("\nFinal Scores - Player: {}, Computer: {}".format(
-        player_score, computer_score))
-    if player_score > computer_score:
-        print("Congratulations! You won the game!")
-    elif player_score < computer_score:
-        print("Computer wins the game! Better luck next time!")
-    else:
-        print("It's a tie game! Well played!")
+        play_again = input("Do you want to play again? "
+                           "(yes/no): ").strip().lower()
+        if play_again not in ['yes', 'y']:
+            break
+
+    print("\nThank you for playing Rock, Paper, Scissors, Lizard, Spock.\n"
+          "\nIf you want to check out my other work visit: "
+          "https://github.com/DamianGillessen1989\n"
+          "\nLive long, and Prosper.\n")
 
 
 if __name__ == "__main__":

@@ -179,8 +179,8 @@ def main():
         print("Welcome to Rock-Paper-Scissors-Lizard-Spock!")
         rounds = input("How many rounds would you like to play? Best of: ")
 
-        while not rounds.isdigit():
-            print("Please choose a number.")
+        while not rounds.isdigit() or not (1 <= int(rounds) <= 25):
+            print("Please enter a number between 1 and 25.")
             rounds = input("How many rounds would you like to play? Best of: ")
 
         rounds = int(rounds)
@@ -189,7 +189,8 @@ def main():
         while player_score < required_wins and computer_score < required_wins:
             player_choice = input(
                 "\nEnter your choice (Rock, Spock, Paper, Lizard, Scissors) "
-                "or type 'exit' to quit the game: ").strip().lower()
+                "or type 'exit' to quit the game: "
+            ).strip().lower()
             if player_choice in ['exit', 'quit']:
                 print(
                     "\nThank you for playing my Rock, Paper, Scissors, Lizard,"

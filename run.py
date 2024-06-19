@@ -129,6 +129,8 @@ def game_mechanics(player_choice, player_score, computer_score):
     Returns:
         tuple: The updated scores for the player and computer.
     """
+    player_choice = player_choice.strip().lower()
+
     print()
     print("Player chooses", player_choice.capitalize())
     player_number = name_to_number(player_choice)

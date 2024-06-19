@@ -90,13 +90,7 @@ def detailed_feedback(player_choice, comp_choice, outcome):
         ("scissors", "lizard"): "Scissors decapitates Lizard!"
     }
     if outcome == "tie":
-        return "Both chose {}.".format(player_choice)
-    elif outcome == "player":
-        return ("Player wins!\n" +
-                win_scenarios.get((player_choice, comp_choice), ""))
-    else:
-        return ("Computer wins!\n" +
-                win_scenarios.get((comp_choice, player_choice), ""))
+        return "Both chose {}.".format(player_choice.capitalize())
 
 
 def game_mechanics(player_choice, player_score, computer_score):
@@ -125,20 +119,17 @@ def game_mechanics(player_choice, player_score, computer_score):
 
     if diff == 0:
         outcome = "tie"
-        print("It's a tie! xxx")
+        print("It's a tie!")
     elif diff in [1, 2]:
         outcome = "computer"
         computer_score += 1
-        print("Computer wins! xxx")
+        print("Computer wins!")
         print(random.choice(taunts))
     else:
         outcome = "player"
         player_score += 1
-        print("Player wins! xxx")
+        print("Player wins!")
         print(random.choice(encouragements))
-
-    feedback = detailed_feedback(player_choice, comp_choice, outcome)
-    print(feedback)
 
     return player_score, computer_score
 
@@ -168,9 +159,10 @@ def main():
                                   " or type 'exit' to quit the game: "
                                   ).strip().lower()
             if player_choice in ['exit', 'quit']:
-                print("\nThank you for playing Rock, Paper, Scissors, "
-                      "Lizard, Spock.\n" "\nIf you want to check out my other "
-                      "work visit: https://github.com/DamianGillessen1989\n"
+                print("\nThank you for playing my Rock, Paper, Scissors, "
+                      "Lizard, Spock game.\n" "\nIf you want to check out some"
+                      " of my other work visit: "
+                      "https://github.com/DamianGillessen1989\n"
                       "\nLive long, and Prosper.\n")
                 return
             if player_choice in choices:
@@ -197,8 +189,8 @@ def main():
         if play_again not in ['yes', 'y']:
             break
 
-    print("\nThank you for playing Rock, Paper, Scissors, Lizard, Spock.\n"
-          "\nIf you want to check out my other work visit: "
+    print("\nThank you for playing my Rock, Paper, Scissors, Lizard, Spock"
+          "game.\n" "\nIf you want to check out some of my other work visit: "
           "https://github.com/DamianGillessen1989\n"
           "\nLive long, and Prosper.\n")
 

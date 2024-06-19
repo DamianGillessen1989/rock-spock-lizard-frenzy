@@ -106,11 +106,13 @@ def detailed_feedback(player_choice, comp_choice, outcome):
     if outcome == 'tie':
         return f'Both chose {player_choice.capitalize()}.'
     elif outcome == 'player':
-        return win_scenarios[(name_to_number
-                             (player_choice), name_to_number(comp_choice))]
+        return win_scenarios[
+            (name_to_number(player_choice), name_to_number(comp_choice))
+        ]
     elif outcome == 'computer':
-        return win_scenarios[(name_to_number
-                             (comp_choice), name_to_number(player_choice))]
+        return win_scenarios[
+            (name_to_number(comp_choice), name_to_number(player_choice))
+        ]
     else:
         return 'Error: Invalid outcome.'
 
@@ -182,47 +184,57 @@ def main():
             rounds = input("How many rounds would you like to play? Best of: ")
 
         rounds = int(rounds)
+        required_wins = (rounds // 2) + 1
 
-        for _ in range(rounds):
-            player_choice = input("\nEnter your choice "
-                                  "(Rock, Spock, Paper, Lizard, Scissors)"
-                                  " or type 'exit' to quit the game: "
-                                  ).strip().lower()
+        while player_score < required_wins and computer_score < required_wins:
+            player_choice = input(
+                "\nEnter your choice (Rock, Spock, Paper, Lizard, Scissors) "
+                "or type 'exit' to quit the game: ").strip().lower()
             if player_choice in ['exit', 'quit']:
-                print("\nThank you for playing my Rock, Paper, Scissors, "
-                      "Lizard, Spock game.\n" "\nIf you want to check out some"
-                      " of my other work visit: "
-                      "https://github.com/DamianGillessen1989\n"
-                      "\nLive long, and Prosper.\n")
+                print(
+                    "\nThank you for playing my Rock, Paper, Scissors, Lizard,"
+                    " Spock game.\nIf you want to check out some of my other "
+                    "work visit: https://github.com/DamianGillessen1989\nLive "
+                    "long, and Prosper.\n"
+                )
                 return
             if player_choice in choices:
                 player_score, computer_score = game_mechanics(
-                    player_choice, player_score, computer_score)
+                    player_choice, player_score, computer_score
+                )
             else:
-                print("Invalid input. Please enter a valid choice ")
-                print("like 'Spock'. And check your spelling!")
+                print(
+                    "Invalid input. Please enter a valid choice like 'Spock'. "
+                    "And check your spelling!"
+                )
 
-            print("\nCurrent Scores - Player: {}, Computer: {}".format(
-                player_score, computer_score))
+            print(
+                "\nCurrent Scores - Player: {}, Computer: {}".format(
+                    player_score, computer_score
+                )
+            )
 
-        print("\nFinal Scores - Player: {}, Computer: {}".format(
-            player_score, computer_score))
+        print(
+            "\nFinal Scores - Player: {}, Computer: {}".format(
+                player_score, computer_score
+            )
+        )
         if player_score > computer_score:
             print("Congratulations! You won the game!")
-        elif player_score < computer_score:
-            print("Computer wins the game! Better luck next time!")
         else:
-            print("It's a tie game! Well played!")
+            print("Computer wins the game! Better luck next time!")
 
-        play_again = input("Do you want to play again? "
-                           "(yes/no): ").strip().lower()
+        play_again = input(
+            "Do you want to play again? (yes/no): "
+        ).strip().lower()
         if play_again not in ['yes', 'y']:
             break
 
-    print("\nThank you for playing my Rock, Paper, Scissors, Lizard, Spock"
-          "game.\n" "\nIf you want to check out some of my other work visit: "
-          "https://github.com/DamianGillessen1989\n"
-          "\nLive long, and Prosper.\n")
+    print(
+        "\nThank you for playing my Rock, Paper, Scissors, Lizard, Spock "
+        "game.\nIf you want to check out some of my other work visit: "
+        "https://github.com/DamianGillessen1989\nLive long, and Prosper.\n"
+    )
 
 
 if __name__ == "__main__":

@@ -50,19 +50,33 @@ def number_to_name(number):
     Returns:
         str: The corresponding name for the choice,
         or "Invalid Input" if the input is invalid.
-    """
+   """
     if number == 0:
-        return "Rock"
+        return 'Rock'
     elif number == 1:
-        return "Spock"
+        return 'Spock'
     elif number == 2:
-        return "Paper"
+        return 'Paper'
     elif number == 3:
-        return "Lizard"
+        return 'Lizard'
     elif number == 4:
-        return "Scissors"
+        return 'Scissors'
     else:
-        return "Invalid Input"
+        return 'Invalid Input'
+
+
+win_scenarios = {
+    (0, 4): "Rock crushes Scissors!",
+    (0, 3): "Rock crushes Lizard!",
+    (1, 4): "Spock smashes Scissors!",
+    (1, 0): "Spock vaporizes Rock!",
+    (2, 0): "Paper covers Rock!",
+    (2, 1): "Paper disproves Spock!",
+    (3, 1): "Lizard poisons Spock!",
+    (3, 2): "Lizard eats Paper!",
+    (4, 2): "Scissors cuts Paper!",
+    (4, 3): "Scissors decapitates Lizard!"
+}
 
 
 def detailed_feedback(player_choice, comp_choice, outcome):
@@ -73,24 +87,13 @@ def detailed_feedback(player_choice, comp_choice, outcome):
         (e.g., "Rock", "Spock", "Paper", "Lizard", "Scissors").
         comp_choice (str): The computer's choice
         (e.g., "Rock", "Spock", "Paper", "Lizard", "Scissors").
-        outcome (str): The outcome of the round ("tie", "player", "computer").
+        outcome (str): The outcome of the round ("tie",
+                      "player", or"computer").
     Returns:
         str: A detailed feedback message explaining the outcome.
-    """
-    win_scenarios = {
-        ("rock", "scissors"): "Rock crushes Scissors!",
-        ("rock", "lizard"): "Rock crushes Lizard!",
-        ("spock", "scissors"): "Spock smashes Scissors!",
-        ("spock", "rock"): "Spock vaporizes Rock!",
-        ("paper", "rock"): "Paper covers Rock!",
-        ("paper", "spock"): "Paper disproves Spock!",
-        ("lizard", "spock"): "Lizard poisons Spock!",
-        ("lizard", "paper"): "Lizard eats Paper!",
-        ("scissors", "paper"): "Scissors cuts Paper!",
-        ("scissors", "lizard"): "Scissors decapitates Lizard!"
-    }
-    if outcome == "tie":
-        return "Both chose {}.".format(player_choice.capitalize())
+   """
+    if outcome == 'tie':
+        return f'Both chose {player_choice.capitalize()}.'
 
 
 def game_mechanics(player_choice, player_score, computer_score):
@@ -98,38 +101,59 @@ def game_mechanics(player_choice, player_score, computer_score):
     Executes a round of the Rock-Paper-Scissors-Lizard-Spock game.
     Args:
         player_choice (str): The player's choice
-        (e.g., "Rock", "Spock", "Paper", "Lizard", "Scissors").
-        player_score (int): The current score of the player.
-        computer_score (int): The current score of the computer.
+            ("Rock", "Spock",
+           "Paper","Lizard","Scissors").
+                player_score(int) : The current score of the player.
+                computer_score(int) : The current score of the computer.
     Returns:
         tuple: The updated scores for the player and computer.
     """
+    global win_scenarios  # Access the global variable
+
     print()
     print("Player chooses", player_choice.capitalize())
     player_number = name_to_number(player_choice)
+
     if player_number == -1:
         print("Invalid player choice. Game cannot proceed.")
         return player_score, computer_score
 
     comp_number = random.randrange(0, 5)
     comp_choice = number_to_name(comp_number)
+
     print("Computer chooses", comp_choice)
 
     diff = (comp_number - player_number) % 5
 
+    result_message = ""  # Initialize result_message with an empty string
+
     if diff == 0:
         outcome = "tie"
         print("It's a tie!")
+        result_message = detailed_feedback(player_choice, comp_choice, outcome)
+
     elif diff in [1, 2]:
         outcome = "computer"
         computer_score += 1
         print("Computer wins!")
         print(random.choice(taunts))
+
+        if (player_number, comp_number) in win_scenarios:
+            result_message = win_scenarios[(player_number, comp_number)]
+
     else:
         outcome = "player"
         player_score += 1
         print("Player wins!")
         print(random.choice(encouragements))
+
+        if (player_number, comp_number) in win_scenarios:
+            result_message = win_scenarios[(player_number, comp_number)]
+
+    if outcome == "computer":
+        result_message = random.choice(taunts)
+
+    print(result_message)
 
     return player_score, computer_score
 

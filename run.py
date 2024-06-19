@@ -75,7 +75,18 @@ win_scenarios = {
     (3, 1): "Lizard poisons Spock!",
     (3, 2): "Lizard eats Paper!",
     (4, 2): "Scissors cuts Paper!",
-    (4, 3): "Scissors decapitates Lizard!"
+    (4, 3): "Scissors decapitates Lizard!",
+    # Adding reverse scenarios for the computer's win
+    (4, 0): "Rock crushes Scissors!",
+    (3, 0): "Rock crushes Lizard!",
+    (4, 1): "Spock smashes Scissors!",
+    (0, 1): "Spock vaporizes Rock!",
+    (0, 2): "Paper covers Rock!",
+    (1, 2): "Paper disproves Spock!",
+    (1, 3): "Lizard poisons Spock!",
+    (2, 3): "Lizard eats Paper!",
+    (2, 4): "Scissors cuts Paper!",
+    (3, 4): "Scissors decapitates Lizard!"
 }
 
 
@@ -88,12 +99,20 @@ def detailed_feedback(player_choice, comp_choice, outcome):
         comp_choice (str): The computer's choice
         (e.g., "Rock", "Spock", "Paper", "Lizard", "Scissors").
         outcome (str): The outcome of the round ("tie",
-                      "player", or"computer").
+                      "player", or "computer").
     Returns:
         str: A detailed feedback message explaining the outcome.
    """
     if outcome == 'tie':
         return f'Both chose {player_choice.capitalize()}.'
+    elif outcome == 'player':
+        return win_scenarios[(name_to_number
+                             (player_choice), name_to_number(comp_choice))]
+    elif outcome == 'computer':
+        return win_scenarios[(name_to_number
+                             (comp_choice), name_to_number(player_choice))]
+    else:
+        return 'Error: Invalid outcome.'
 
 
 def game_mechanics(player_choice, player_score, computer_score):
@@ -108,8 +127,6 @@ def game_mechanics(player_choice, player_score, computer_score):
     Returns:
         tuple: The updated scores for the player and computer.
     """
-    global win_scenarios  # Access the global variable
-
     print()
     print("Player chooses", player_choice.capitalize())
     player_number = name_to_number(player_choice)
@@ -130,29 +147,18 @@ def game_mechanics(player_choice, player_score, computer_score):
     if diff == 0:
         outcome = "tie"
         print("It's a tie!")
-        result_message = detailed_feedback(player_choice, comp_choice, outcome)
-
     elif diff in [1, 2]:
         outcome = "computer"
         computer_score += 1
         print("Computer wins!")
         print(random.choice(taunts))
-
-        if (player_number, comp_number) in win_scenarios:
-            result_message = win_scenarios[(player_number, comp_number)]
-
     else:
         outcome = "player"
         player_score += 1
         print("Player wins!")
         print(random.choice(encouragements))
 
-        if (player_number, comp_number) in win_scenarios:
-            result_message = win_scenarios[(player_number, comp_number)]
-
-    if outcome == "computer":
-        result_message = random.choice(taunts)
-
+    result_message = detailed_feedback(player_choice, comp_choice, outcome)
     print(result_message)
 
     return player_score, computer_score

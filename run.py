@@ -144,7 +144,7 @@ def game_mechanics(player_choice, player_score, computer_score):
 
     diff = (comp_number - player_number) % 5
 
-    result_message = ""  # Initialize result_message with an empty string
+    result_message = ""
 
     if diff == 0:
         outcome = "tie"

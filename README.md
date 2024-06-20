@@ -1,7 +1,3 @@
-Rock Spock Lizard Frenzy is a Rock Paper Scissors Lizard Spock command line based Python program or game, which I have created as the third project during my Full-Stack Development course with the Code Institute.
-
-The live link can be found here - https://rock-spock-lizard-frenzy-fd1c0328cc20.herokuapp.com/
-
 # The Rock Spock Lizard Frenzy command line based Python game
 
 ## Introduction
@@ -14,196 +10,208 @@ Developed using a combination of Python and randomisation logic, this project se
 
 In this README, I will delve into the project's development process, detailing the planning stages, design considerations, implementation of key features, and the technologies utilised. I hope you find this project both informative and enjoyable as you explore the world of Rock Spock Lizard Frenzy. Thank you for joining me on this exciting adventure!
 
-![Responsive Mockup](https://github.com/DamianGillessen1989/que-padrisimo/blob/main/docs/amiresponsiveimage.webp)
-
 The live link can be found here - [https://rock-spock-lizard-frenzy-fd1c0328cc20.herokuapp.com/](https://rock-spock-lizard-frenzy-fd1c0328cc20.herokuapp.com/)
 
-## Latin-Spanish Language Learning Experience
+## Rock Spock Lizard Frenzy Gaming Experience
 
-I took inspiration from a variety of sources and approaches when developing the Que Padrísimo Latin-Spanish Language Learning website, with the goal of giving users an engaging and productive learning experience and environment. I used ideas from user-centred design and language learning methodologies to guide the development process, loosely inspired by, for example, "The Elements of User Experience" methodology.
+I took inspiration from a variety of sources and approaches when developing the Rock Spock Lizard Frenzy game, with the goal of giving users an engaging and entertaining gaming experience. I used ideas from user-centred design and game development methodologies to guide the process.
 
 ## Project Development Approach
 
-In attempt to provide a comprehensive and impactful educational platform, I divided the project's progress into the following stages:
+To create a comprehensive and engaging instructional program, I separated the project's progress into the following stages:
 
-- Discovery Phase
-- Planning Phase
-- Development Phase
-- Testing Phase
-- Deployment Phase
+The Discovery stage, Planning stage, Development stage, Testing stage, and Deployment stage.
 
-Each phase was thoroughly planned and executed step-by-step, in order to address different aspects of the platform's functionality, content, and user interaction. Using this approach allowed for a user-centric, holistic and iterative development process, with a focus on both the educational content and the user experience.
+Each phase was meticulously planned and performed step by step to address various aspects of the program's functioning, content, and user experience. This strategy enabled a user-centric, comprehensive, and iterative development process that prioritised both clear content and user experience.
 
 ### Discovery Phase
 
 #### My Goals:
 
-- I aimed to streamline the user journey, ensuring smooth navigation across the platform.
-- I endeavoured to enhance textual clarity to prevent any potential user confusion.
-- My aspiration was to elicit positive emotional responses from users, fostering deeper engagement.
-- I worked towards maintaining coherence and relevance across all elements of the content.
-- Lastly, I focused on structuring the content in a way that avoids overwhelming users.
+- I intended to streamline the user experience and ensure smooth navigation through the program.
+- I tried to improve textual clarity to avoid future user confusion.
+- My goal was to evoke favourable emotional responses from users, hence encouraging deeper interaction.
+- I worked to ensure that the returned messages was coherent and relevant throughout.
+- Finally, I worked on developing the flow so that is made sense, was accessible and did not overwhelm users.
 
 ### User Objectives:
 
-  #### Goals for First-time Visitors:
+  #### Goals for First-time Users:
 
-  - Swiftly grasp the purpose and scope of the platform.
-  - Effortlessly navigate between games and pages.
-  - Experience a sense of progression while exploring.
-  - Minimise visual fatigue caused by excessive content.
-  - Resume browsing seamlessly after any interruptions.
+  - Quickly understand the platform's purpose and scope.
+  - Easily navigate through the program.
+  - Feel a sense of progress while investigating.
+  - Continue browsing easily after any disruptions.
 
   #### Goals for Returning Visitors:
 
-  - Easily locate social media links.
-  - Understand the presented information.
-  - Engage with the language learning content without difficulty.
+  - Understand the information that has been offered.
+  - Interact with the program/game material without difficulty.
     
 ### Planning Phase
 
-To ensure a systematic approach to project management, I structured the development process into three distinct phases:
+Taking a systematic approach to my project management, I decided to divide the development process into three separate phases.
 
 #### Phase 1: Conceptualisation
 
-- Come up with ideas for 3 different language learning games that would be simple to program and easy to understand by users to facilitate language learning.
-- Develop a brand theme, logo and colour scheme that would be attractive, facilitate learning, and encourage users to return.
-- Design the site mobile-first and make sure it's properly responsive, be appropriately styled for and facilitates learning on, all devices.
+- Plan the logic flow for the Rock Spock Lizard Frenzy game that would be simple to program and easy to understand by users to facilitate enjoyment.
+- Plan the skeleton-structure for the Python logic that will be used in the development of the game.
 
 #### Phase 2: Refinement
 
-- Test the games and make any appropriate adjustments necessary for the games to function as intended.
+- Test the game and make any appropriate adjustments necessary for it to function as intended.
 - Solicit feedback from peers to gauge usability and functionality.
 - Address any identified bugs or issues to enhance user experience.
 
 #### Phase 3: Validation and Finalisation
 
-- Conduct thorough testing using tools like W3C to ensure compliance with web standards.
-- Prepare the project for submission, ensuring all requirements are appropriately met.
+- Test thoroughly using tools such as the PEP8 Python Validator to confirm compliance with web standards.
+- Prepare the project for submission, ensuring that all requirements have been met.
 
 ### Development Phase
 
-During the development phase of this project, careful attention was given to crafting an immersive and visually appealing user experience:
+During the development phase of this project, careful attention was given to creating game-logic that would be engaging and easy-to-understand for all users:
 
 #### Colour Scheme:
 
-- Orange & Yellow
-- White
-- Midnight Purple
-- Navy Blue
+N/A
 
-With a focus on user comfort, the design was carefully crafted to accommodate learning, with a simple plain background and a centered game area that focuses the user's attention to that space. Opting for a light background reduces distraction, while the purple is an attractive and positive colour that will encourage and direct the users focus. The colour palette was thoughtfully curated to deliver a cohesive and visually stimulating encounter, that will hopefully assist in facilitating user learning experiences.
+As Rock Spock Lizard Frenzy is a command line Python program/game, things like colour scheme or brand design were not a factor for this project.
 
 #### Typography:
 
-- Raleway
-- Sans-Serif
-
-Consistency in typography plays a pivotal role in maintaining readability and visual consistency throughout the site. Therefore, a deliberate choice was made to utilise a select combination of two fonts across all pages. Varied font weights, styles and colours were strategically incorporated to infuse visual interest while upholding a polished and professional appearance, with hopes that this will ensure the site narrative flows well and makes sense.
+N/A
 
 ### Blueprint
 
-During the development phase, detailed sketches were created to outline the project's design and functionality across various screen sizes and devices.
+During the development phase, a detailed logic flow was developed. 
 
-[Portfolio Wireframes](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/que-padrisimo-wireframes.webp)
-
-These wireframes served as a first-draft blueprint for page layouts and responsiveness. Iterative adjustments were made during development to enhance user experience and resolve usability challenges.
+This logic flow is a useful blueprint for understanding the program flow and the user journey. Iterative modifications were made during development to improve the user experience and address usability issues.
 
 ### Site Structure
 
-Que Padrísimo's website structure was designed to provide a user-friendly navigation experience. The structure is organized into three distinct sections, each serving a specific purpose and presenting relevant information effectively. Below is an overview of the site structure:
-
-#### 1. Header:
-- There will be a consistent header at the top of all site pages. The design will be consistent across all pages, and contain the logo which will also link back to the home page, and three additional links.
-- These links will navigate the user to each page of the site, the home page, scramble game, and vocab flashcard practice.
-
-#### 2. Home Page/Quiz Game:
-
-- The landing page offers a brief introduction to the website and also to the first game of the site, the Quiz.
-- It serves as the entry point to the platform, providing visitors with a user-friendly, interactive game in which they can test their intermediate-level Spanish.
-
-#### 3. Scramble Game:
-
-- This page matches the homepage in theme, style and layout, in hopes that this will facilitate learning and user focus. It also presents the users with the second interactive and engaging learning game, the word scramble game.
-- It includes an introductory paragraph explaining to users what to do and how to play the game.
-
-#### 4. Flashcards Vocab Practice:
-
-- The last page also matches the homepage in theme, style and layout. Users are presented with 50 flashcards in which they can read a word in English and click the flashcard in order to reveal the Spanish word and pronunciation.
-- It also includes instructional paragraphs both introducing the game and informing the users to click the flashcard to reveal the answer.
-
-#### 5. Footer:
-
-- Every page in the portfolio includes a consistently styled footer, that matches the header in colour, with social network icons and other relevant information presented.
-- It serves as a reliable starting point for visitors to explore the website and contact me on other platforms should the need arise.
-
-The site structure is ultimately designed to be visually appealing, logically organised, and simple to use, ensuring that visitors who browse Que Padrísimo with hopes of improving their Latin-Spanish language skills, have a pleasant and fascinating experience.
+N/A
 
 ### Features Present:
 
-- Responsive navbar facilitating easy navigation.
-![Responsive Navbar](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/que-padrisimo-header-one.webp)
-![Responsive Navbar](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/que-padrisimo-header-two.webp)
-- Footer housing navigation links and social media icons.
-![Footer](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/que-padrisimo-footer.webp)
-- An attractive Game Area.that focuses users' attention with hopes of facilitating learning and focusing attention.
-![Game Area](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/que-padrisimo-game-area.webp)
-- The first game of the site, the Quiz. Users are presented with a 'start game button', then a question and 4 multiple-choice answers. When they guess correctly they are appropriately informed, as if they guess incorrectly. Once the quiz is complete users are presented with their final score and the option to play again or quit the quiz and return.
-![Quiz Game](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/que-padrisimo-quiz.webp)
-- The second game of the site, the Word Scramble. Users are presented with a 'start game button', then a scrambled Spanish word and a clue in English, and a 'quit game' and 'guess' button respectively. They may type their answer and make their guess, and their attempts and scores are recorded and presented.
-![Word Scramble Game](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/que-padrisimo-scramble.webp)
-- The last game of the site, the Flashcards, vocab practice. Users are presented with a flashcard and it's English word on the front. There are arrows for navigating between flashcards and a random button which will reveal a random flashcard. Once ready they may click the flashcard to reveal the Spanish word and its phonetical pronunciation.
-![Flashcards Practice](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/que-padrisimo-flashcard.webp)
-![Flashcards Practice](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/que-padrisimo-flashcard-two.webp)
+- Welcome message - The welcome message and request from user for a set number of rounds to play is presented when the program starts.
+![Welcome message](https://raw.githubusercontent.com/DamianGillessen1989/)!
+- Players' choice - once the game has started and user has selected a set number of rounds to play, the game then asks the user to make a choice between Rock, Paper, Scissors, Lizard, or Spock.
+![Player Choice](https://raw.githubusercontent.com/DamianGillessen1989/)
+- Game flow - The game then follows the usual Rock Paper Scissors Lizard Spock rules and presents the player with a fun string of informational replies. The player is then requested for their next choice, if necessary. Player and computer scores are presented.
+![Game Process](https://raw.githubusercontent.com/DamianGillessen1989/)
+- Final Scores - Once the set number of rounds is completed the 'final score' is presented to the user and they are then asked if they want to play again.
+![Final Scores](https://raw.githubusercontent.com/DamianGillessen1989/)
+- Goodbye message - Once the user selects 'no' and decides to discontinue the program, they then are presented with a goodbye message and a link to my other projects.
+![Goodbye Message](https://raw.githubusercontent.com/DamianGillessen1989/)
 
 ### Features to Implement:
 
-- One thing I tried to implement in this project but was not able to successfully execute it, was: I tried to move the long arrays of Spanish answers and questions to their own individual .json files, and 'fetch' the information from there in each .js file where appropriate. However after much testing I was unsuccessful in getting this to work - however, it does give me something to work on for next time, and also, at least I am aware of why this would be the preferred methodology, in keeping with good JavaScript practices.
-- I would like one day to make a contact page with a functional contact form with email notification capabilities.
-- Potentially the incorporation of and use of dynamic educational resources such as gifs and videos.
-- A toggleable light/dark mode facility, allowing user browsing based on preferences.
-- To create a distinct URL and domain to enhance branding efforts.
-- A wider variety of games and learning tools. Expanded databases of questions and answers for the existing games as well as more features like countdown timers and the ability to create a profile and record scores and track progress.
-- I would like to add rounds to the Word Scramble game so player would not repeat the words and be able to track their scores and progress better.
-- The 404 page is not 'live' as this requires the site to be 'hosted' on a server - if the site was to be hosted on a server this page could be deployed for whenever a user tries to open a page that doesn't exist or use a broken link etc.
+- In the future I might be open to installing some graphics for the game or some ASCII art representing each of the 5 potential choices or developing a GUI.
+- Adding the technology for multi-player facility would be fun also, so player can choose whether to play vs another player or vs the computer.
+- I could potentially implement game statistics and leaderboards in order to provide players with a sense of progression and achievement.
 
 ## Technologies Used:
 
 ### Development Tools and Frameworks:
 
-- [HTML](https://en.wikipedia.org/wiki/HTML) - Lays the framework for the project's main content.
-- [CSS](https://en.wikipedia.org/wiki/CSS) - Maintains a uniform style for all web content throughout the project.
-- [JavaScript](https://en.wikipedia.org/wiki/JavaScript) - Provide site functionality and game functionality on the site.
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - this program was developed fully using Python3.
 
 ### Styling and Design Elements:
 
-- [Google Fonts](https://fonts.google.com/) - Provides the project's fonts, including Raleway and Sans-Serif, which are mentioned in the header.
-- [Font Awesome](https://fontawesome.com/) - Provides the social media icons in the footer and flashcards.
-- [Amiresponsive](https://ui.dev/amiresponsive) - Used to build responsive mockups - [https://ui.dev/amiresponsive?url=https://damiangillessen1989.github.io/que-padrisimo/](https://ui.dev/amiresponsive?url=https://damiangillessen1989.github.io/que-padrisimo/)
-- [Icons8](https://icons8.com/) - Used to locate and select the site's Favicons.
-- [Wepik](https://wepik.com) - Used to generate an AI image for site logo.
+- [CI Python Essentials Template](https://github.com/Code-Institute-Org/python-essentials-template) - Provides all the necessary files for the program to be presented nicely in Heroku.
 
 ### Development and Testing Utilities:
 
-- [GitHub](https://github.com/) - Repository where project code is stored following pushes and commits.
-- [Git](https://git-scm.com/) - Oversees version control, allowing pushes and commits via the Gitpod terminal.
-- [Visual Studio Code](https://code.visualstudio.com/) - Served as the primary setting for code development.
-- [Figma](https://www.figma.com/) - Used to generate project layouts and design wireframes.
-- [Responsive Viewer](https://responsiveviewer.org/) - Used for cross-platform and cross-browser testing.
-- [Wave Web Accessibility Evaluation Tool](https://wave.webaim.org/) - Used to assess the website's accessibility.
+- [GitHub](https://github.com/) - Repository in which project code is stored after pushes and commits.
+- [Git](https://git-scm.com/) - Supervises version control and permits commits and pushes using the Gitpod terminal.
+- [Visual Studio Code](https://code.visualstudio.com/) - This was the principal environment for code development.
 
-### Optimization and Quality Assurance:
+### Optimisation and Quality Assurance:
 
-- [Grammarly](https://app.grammarly.com/) - Used to ensure polished material by addressing grammar errors throughout the production.
-- [w3 Validator](https://validator.w3.org/) - Used to validate the CSS styling code and HTML of internet pages.
-- [JSHint](https://jshint.com/) - Used to validatea the JavaScript code of all pages.
-- [Esprima](https://esprima.org/demo/validate.html) - Used to validatea the JavaScript code of all pages.
-- [Google Chrome DevTools & Lighthosue](https://developer.chrome.com/docs/lighthouse/overview) - Used to assess the website's functionality.
-- [Google PageSpeed](https://pagespeed.web.dev/) - Used to analyse and improve the website's functionality.
+- [Grammarly](https://app.grammarly.com/) - Used to check content throughout the production process.
+- [PEP8 Python Validator](https://pep8ci.herokuapp.com/) - Used to validatea the Python code of the program and ensure deployability on Heroku.
+- [Heroku](https://www.heroku.com/) - Used to deploy the program.
 
 ## Testing Phase
 
-A thorough testing approach was carried out to ensure the new site's optimal operation and efficiency. The [TESTING.md](https://github.com/DamianGillessen1989/que-padrisimo/blob/main/TESTING.md) file contains a list of steps taken to ensure the site's best performance.
+As much of the programs elements were provided in the CI template for this project the amount of testing required for this project was fairly straight-forward or basic. I still attempted to conduct a thorough testing approach to ensure the game's optimal operation and efficiency. The following efforts were taken to ensure the program's integrity and user experience:
+
+### Testing and Evaluation
+
+1. Cross-Platform Compatibility: The game was thoroughly tested across various operating systems, including Windows, macOS, and Linux, to ensure consistent performance and functionality.
+
+2. User Input Validation: Extensive testing was conducted to ensure the game accurately captures and processes user inputs. Special attention was given to verifying correct functionality when users input valid choices and handling invalid inputs gracefully.
+
+3. Randomness and Fairness: The randomness of the computer's choices was rigorously tested to ensure fairness. Multiple iterations of gameplay were simulated to confirm that the distribution of choices (Rock, Spock, Paper, Lizard, Scissors) was even and unbiased.
+
+4. Functionality Testing: All game mechanics, such as the comparison of choices, score tracking, and end-of-game conditions, were thoroughly tested to ensure they operate correctly and provide accurate results.
+
+5. Feedback Messages: Detailed feedback messages were reviewed to ensure they correctly reflect the outcome of each round, providing clear and accurate information to the player about why a particular choice won or lost.
+
+6. Edge Case Handling: Various edge cases were tested, such as extremely high numbers of rounds, rapid input entries, and unusual input sequences, to ensure the game handles these scenarios without errors or crashes.
+
+These testing techniques enabled the identification and correction of any issues or inconsistencies, resulting in a reliable and enjoyable game experience.
+
+### Future Testing
+I hope to be able to add the following testing processes to "Rock Spock Lizard Frenzy" in the future:
+
+1. Performance Testing:
+
+    - Load Times: Measure the execution time of various functions, especially those that involve user input and random choice generation, to ensure the game runs smoothly.
+    - Resource Usage: Monitor CPU and memory usage to ensure the game is efficient and does not cause unnecessary strain on the system.
+
+2. Usability Testing:
+
+    - User Experience: Conduct user testing sessions to gather feedback on the game's ease of use and overall enjoyment.
+    - Error Handling: Ensure the game provides helpful error messages and guides users to correct invalid inputs without frustration.
+
+3. Compatibility Testing:
+
+    - Cross-Platform Testing: Test the game on different operating systems (Windows, macOS, Linux) to ensure consistent behavior and performance.
+    - Python Versions: Verify compatibility with multiple Python versions to ensure broad accessibility.
+
+4. Accessibility Testing:
+
+    - Screen Readers: Ensure the game can be used with screen readers for visually impaired players.
+    - Keyboard Navigation: Confirm that all game functions can be accessed and controlled using only the keyboard.
+
+5. Security Testing:
+
+    - Input Validation: Ensure all user inputs are properly validated and sanitized to prevent injection attacks or other malicious exploits.
+    - Data Integrity: Test that scores and game state data are accurately maintained and cannot be easily tampered with.
+
+
+6. Stress Testing:
+
+    - High Input Volume: Simulate scenarios where a large number of inputs are processed in quick succession to ensure the game remains stable and responsive.
+    - Extended Play: Run the game for extended periods to identify any memory leaks or performance degradation over time.
+
+7. Regression Testing:
+
+    - Feature Testing: Re-test all features after any updates or changes to ensure no existing functionality is broken.
+    - Bug Fixes: Verify that previously identified bugs remain fixed in future versions.
+
+8. Automated Testing:
+
+    - Unit Tests: Develop a comprehensive suite of unit tests for all game functions to catch errors early in the development process.
+    - Integration Tests: Ensure all components of the game work together seamlessly by creating automated integration tests.
+
+Implementing these future testing processes will help maintain the quality, reliability, and accessibility of "Rock Spock Lizard Frenzy," ensuring a positive experience for all players.
+
+### Validator Testing
+
+I conducted testing using the PEP8 Python Validator to ensure the validity and adherence to Heroku deployment standards.
+
+1. PEP8 Python Validator: The Python code was validated using the PEP8 Python Validator, which looked for missing components, syntactical errors, and Python standard conformance.
+- PEP8 Python Validator Test Results
+![PEP8 Python Validator test results](https://raw.githubusercontent.com/DamianGillessen1989/)
+
+2. ExtendsClass Python syntax checker: I also used the ExtendsClass Python syntax checker to ensure the python code was correct and compliant with Python standards.
+- ExtendsClass Python syntax checker Test Results
+![ExtendsClass Python syntax checker test results](https://raw.githubusercontent.com/DamianGillessen1989/)
+
+After completing this rigorous validator testing, I was able to identify and correct any coding errors, accessibility concerns, or performance issues, hopefully resulting in a compliant, user-friendly, and high-performing website.
 
 ## Resolved and Unsolved Bugs
 

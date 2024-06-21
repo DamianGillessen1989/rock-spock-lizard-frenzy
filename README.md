@@ -217,27 +217,19 @@ After completing this rigorous validator testing, I was able to identify and cor
 
 ### Resolved Bugs
 
-Several issues were identified and rectified during the Que Padrísimo website construction process to ensure optimal operation and user experience.
+Several issues were identified and rectified during the Rock Spock Lizard Frenzy program construction process with hopes to optimise operation and improve user experience.
 
-- Initially, when clicked, the navbar links were displaying behind the body, causing them to be obscured partially or entirely hidden from view and be unusable. Upon investigation, it was discovered that the solution was simple. To fix this issue, I adjusted the z-index properties of the header element to ensure that it remains presented above the body content and remains visible and useable at all times. [Nav bar bug before-image](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/nav-bar-bug-before.webp) - [Nav bar bug after-image](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/nav-bar-bug-after.webp)
+- Initially, when the program was run, the user was getting duplicate win/loss notifications. To fix this issue, I located and removed the duplicate code that was responsible for the unneccessary win/loss message. [Dup win/loss bug image](https://raw.githubusercontent.com/DamianGillessen1989/) - [Dup win/loss bug image two](https://raw.githubusercontent.com/DamianGillessen1989/)
 
-- An issue arose with regards to the start button on the home page, for the 'Quiz' game. The button remained unstyled despite my adding the appropriate CSS styling rules and was not changing despite editing the CSS. After too much investigation I realised this was due to a simple typo in the HTML code for the class value of the button, after which I corrected and the issue was resolved. [Quiz Start Button bug before-image](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/quiz-before.webp) - [Quiz Start Button bug after-image](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/quiz-after.webp) [Quiz Start Button typo before-image](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/quiz-code-before.webp) - [Quiz Start Button typo after-image](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/quiz-code-after.webp)
-
-- After adding the feature that a user can hit 'enter' to submit their score in the Word Scramble game, whenever I did so the score and attempts would increase by 2 - after investigation I realised this was because I had inadvertently added two handleEnterKeyPress functions to my JS. Removing one of the duplicate handleEnterKeyPress functions solved the issue and now the score is calculating correctly. [Scramble Score bug before-image](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimov/main/docs/scramble-bug-before.webp) - [Scramble Score bug after-image](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/scramble-bug-after.webp)
-
-- A bug arose when testing the Flashcards game - despite the code seeming to function correctly, the 'words' being presented were always the same despite being able to scroll through the cards and the random button functioning as expected. After investigation, the reason for this was found to be an issue with my JavaScript. The solution was to add 'onclick="showNextCard()"' to the HTML, and once I did this the issue resolved itself satisfactorily. [Flashcard bug before-image](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/flashcard-bug-before.webp) - [Flashcard bug after-image](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/flashcard-bug-after.webp)
-
-- Upon inspecting the footer section of the website, a perplexing issue surfaced where the four social media icons were appearing in the same position on the screen, making them unreadable and inaccessible. After much searching, I discovered a rogue 'position:fixed' in one of my CSS rules that was not supposed to be there. Once removed the social media icons displayed correctly as intended. [Footer bug before-image](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/footer-bug-before.webp) - [Footer bug after-image](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/footer-bug-after.webp)
+- An issue arose with the 'best of x rounds' function - if a user entered the wrong format of reply in the terminal, in this case an integer, the program crashed and the user saw a convaluted error message. To fix it I added the feature indicating to the player their reply needs to be an integer. This took a couple of attempts to fix, see the two error messages here: [Best of rounds bug image one](https://raw.githubusercontent.com/DamianGillessen1989/) - [Best of rounds bug image two](https://raw.githubusercontent.com/DamianGillessen1989/)
 
 ### Unresolved Bugs
 
-- There is one remaining issue with the Word Scramble game, in which, when a user clicks 'guess' and submits their answer, if they at that point hit 'enter', they are awarded an extra attempt and score if appropriate. This doubling of scores is one issue with the Java Script code that has not been resolved but should be feasible with some effort and attention.
-- Some users reported an alignment issue with the 'Quit Quiz' and 'Play Again' buttons on the Quiz game. Despite testing on multiple devices and screen-resolutions I was not able to recreate the issue - the alignment seems fine on my devices. [Quiz Button bug - not able to reproduce](https://raw.githubusercontent.com/DamianGillessen1989/que-padrisimo/main/docs/quiz-buttons-bug.webp)
-- On the word scramble game - when a player completes all the words in the list, they are then 'stuck' and are presented the last word from the array repeatedly until the page is refreshed. This is one thing that could be fixed with further development.
+- There are no remaining bugs in the code that I can find - the program seems robust enough to take most forms of potential input and guide the user through wherever they go wrong. At this time, as it's such a simple game, I think there is little room for error. Any potential changes are more design or ux-related choices that can improve the overal program and experience.
 
 ## Deployment Phase
 
-Upon completing the development phase of the personal portfolio website, the focus shifted to deploying the site for online accessibility. The deployment strategy was meticulously crafted, harnessing the synergy of Visual Studio Code (VSC), Sourcetree, and Git/GitHub to seamlessly transition from development to production.
+Upon completing the development phase of Rock Spock Lizard Frenzy, the focus shifted to deploying the site for online accessibility. The deployment strategy was meticulously crafted, harnessing the synergy of Visual Studio Code (VSC), Sourcetree, and Git/GitHub to seamlessly transition from development to production.
 
 #### 1. Version Control with Git/GitHub:
 
@@ -258,76 +250,51 @@ Upon completing the development phase of the personal portfolio website, the foc
 - Advanced functionalities such as branching and merging facilitated parallel development and seamless integration of new features.
 - The deployment workflow entailed pushing the finalized codebase from the local repository to the remote repository on GitHub via Sourcetree.
 
-#### 4. Hosting on GitHub Pages:
+#### 4. Hosting on Heroku:
 
-- GitHub Pages, an esteemed static site hosting service offered by GitHub, was selected as the ideal deployment platform for the personal portfolio website.
-- Deployment to GitHub Pages was seamlessly initiated from the GitHub repository, leveraging built-in functionality to publish the site.
-- Continuous integration and deployment (CI/CD) pipelines were configured to automatically deploy updates to the website upon pushing changes to the master branch.
+- The Heroku local Python environment was selected as the ideal platform for hosting the "Rock Spock Lizard Frenzy" command line game.
+- Execution of the game was seamlessly initiated from the Heroku local Python environment, leveraging built-in functionality to run Python scripts, via Github.
+- Continuous testing and updates were configured to automatically execute and validate changes to the game upon making modifications to the main script.
 
 #### 5. Final Testing and Verification:
 
-- Rigorous testing was conducted to validate the website's functionality, compatibility, and responsiveness across diverse devices and browsers before going live.
-- Thorough visual inspections, cross-browser assessments, and performance optimizations were carried out to deliver an unparalleled user experience.
-- Any identified issues were promptly addressed, and necessary refinements were implemented to ensure the website met the highest standards of quality and user satisfaction.
+- Rigorous testing was conducted to validate the game's functionality and compatibility across different operating systems and Python versions before release.
+- Thorough debugging, performance assessments, and user experience evaluations were carried out to deliver an engaging and reliable gaming experience.
+- Any identified issues were promptly addressed, and necessary refinements were implemented to ensure the game met the highest standards of quality and user satisfaction.
 
-In conclusion, the deployment of the personal portfolio website using VSC, Sourcetree, and Git/GitHub was executed meticulously to guarantee a smooth and successful transition from development to production. The collaborative tools and streamlined processes employed throughout the deployment lifecycle ensured that the website was delivered with precision and professionalism, ready to showcase my skills, projects, and accomplishments to the world.
+In conclusion, the deployment of the "Rock Spock Lizard Frenzy" game was executed meticulously to guarantee a smooth and successful transition from development to distribution. The careful planning and testing processes employed throughout the deployment lifecycle ensured that the game was delivered with precision and professionalism, ready to provide an enjoyable and challenging experience for players everywhere.
 
-- The site was deployed to GitHub pages. The steps to deploy are as follows: 
-  - In the GitHub repository, navigate to the Settings tab 
-  - From the source section drop-down menu, select the Main Branch
-  - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
+- The site was deployed to Heroku. The steps to deploy are as follows: 
+  - In the Heroku dashboard, navigate to the Settings tab and apply the appropriate settings there.
+  - From the deploy section, connect the correct GitHub repository, and hit 'manually deploy' at the bottom of the page.
+  - The program will be automatically deployed at which point you can access the app and run the program. 
 
-The live link can be found here - [https://damiangillessen1989.github.io/que-padrisimo/](https://damiangillessen1989.github.io/que-padrisimo/) 
+The live link can be found here - [https://rock-spock-lizard-frenzy-fd1c0328cc20.herokuapp.com/](https://rock-spock-lizard-frenzy-fd1c0328cc20.herokuapp.com/)
 
 ## Credits
 
 ### Development Tools and Frameworks
 
-- [**HTML**](https://en.wikipedia.org/wiki/HTML) - Served as the foundation for the project's content.
-- [**CSS**](https://en.wikipedia.org/wiki/CSS) - Throughout the project, all web content was styled uniformly.
-- [**JavaScript**](https://en.wikipedia.org/wiki/JavaScript) - Provided site functionality and game functionality on the site.
-
-### Styling and Design Elements
-
-- [**Google Fonts**](https://fonts.google.com/) - Provided fonts for the project, specifically Raleway and Sans-Serif, linked in the header.
-- [**Font Awesome**](https://fontawesome.com/) - Supplied social media icons used in the footer and flashcards.
-- [**Amiresponsive**](https://ui.dev/amiresponsive) - Used for creating the Responsive Mockup.
-- [**Icons8**](https://icons8.com/) - The Favicon used for this site was retrieved from icons8.com
-- [**Wepik**](https://wepik.com/) - Utilised to generate an AI image for the site logo.
+- [**Python**](https://en.wikipedia.org/wiki/Python_(programming_language)) - this program was developed fully using Python3.
 
 ### Development and Testing Utilities
 
 - [**GitHub**](https://github.com/) - Repository for storing project code after commits and pushes.
 - [**Git**](https://git-scm.com/) - Manages version control, with Gitpod terminal facilitating commits and pushes.
 - [**Visual Studio Code**](https://code.visualstudio.com/) - Served as the primary development environment.
-- [**Figma**](https://www.figma.com/) - Used to generate project layouts and design wireframes.
-- [**Responsive Viewer**](https://responsiveviewer.org/) - Used for testing across devices and browsers.
-- [**Wave Web Accessibility Evaluation Tool**](https://wave.webaim.org/) - Used to test accessibility of the site.
-- [**Anandvikas**](https://codepen.io/anandvikas/pen/RwxKagb) - Inspiration for the Word Scramble game.
-- [**NicoHDL**](https://codepen.io/nicoHDL/pen/dyaVNBd) - Inspiration for the Spanish Quiz game.
-- [**Quizlet**](https://quizlet.com/396139213/html-and-css-code-flash-cards/) - Inspiration for the Flashcards game.
-- [**DevSolitude**](https://www.devsolitude.com/blog/how-to-create-html-css-cards-flashcards) - Also inspiration for the Flashcards game.
+- [**Anandvikas**](https://gist.github.com/EricPPeterson/77c4c92c63757cb4426c) - Inspiration for the game mechanics for the Rock Paper Scissors Lizard Spock game.
 
 ### Optimization and Quality Assurance
 
 - [**Grammarly**](https://app.grammarly.com/) - Employed to rectify grammar errors across the project, ensuring polished content.
-- [**w3 Validator**](https://validator.w3.org/#validate_by_input) - Used to verify the HTML of the site pages and CSS styling code.
-- [**JSHint**](https://jshint.com/) - Used to validatea the JavaScript code of all pages.
-- [**Esprima**](https://esprima.org/demo/validate.html) - Used to validatea the JavaScript code of all pages.
-- [**Chrome DevTools & Lighthouse**](https://developer.chrome.com/docs/lighthouse/overview) - Used to check the performance rating of the site.
-- [**Google PageSpeed**](https://pagespeed.web.dev/) - Used to analyse and improve the performance of the site.
+- [**PEP8 Python Validator**](https://pep8ci.herokuapp.com/) - Used to validatea the Python code of the program and ensure deployability on Heroku.
+- [**Heroku**](https://www.heroku.com/) - Used to deploy the program.
 
 ### Acknowledgements
 
-I'd like to thank the following persons and sources for their invaluable assistance and support while this project was being developed:
+I would like to thank the following individuals and sources for their significant assistance and support while this project was being developed:
 
-- My Mentor Harry Dhillon at the Code Institute - For his advice, tips and assistance in creating this awesome project, and for the guidance and inspiration for this extensive README file.
-- My Peers and Instructors at the Code Institute - For providing valuable feedback and guidance during the development and testing phases. Especially Thomas for his constant feedback and support.
-- The Love Running project - This project was a great guide on how to prepare the basic site structures and how to present information in a nice styled way - [https://github.com/Code-Institute-Solutions/love-running-v3](https://github.com/Code-Institute-Solutions/love-running-v3).
-- The Sikhism Project by Harry Dhillon - [https://github.com/Harry-Leepz/Sikhism-Project](https://github.com/Harry-Leepz/Sikhism-Project).
-- My personal portfolio project - [https://github.com/DamianGillessen1989/personal-portfolio-dg](https://github.com/DamianGillessen1989/personal-portfolio-dg).
-- Stack Overflow - A treasure trove of knowledge and solutions to various coding challenges encountered during development.
-- My cousin Hanno - For his continuous support educational tips and endless patience.
-- My daughter Thea - Just for being my daughter.
+- My Code Institute peers and instructors, who provided useful comments and guidance throughout the creation and testing phases. Special thanks to Thomas for his constant input and assistance.
+- To my daughter Thea, who is the love of my life.
 
-I am grateful to everyone who contributed to the project's success, whether directly or indirectly. Your encouragement and support have been critical in achieving my goal with this site.
+I am grateful to everyone who contributed to the project's success, either directly or indirectly. Your encouragement and support have been important in helping me reach my aim with this website.

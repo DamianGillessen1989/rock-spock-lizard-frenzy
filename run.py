@@ -1,3 +1,5 @@
+# This code is based on the code by EricPPeterson on GitHub
+
 import random
 
 encouragements = [
@@ -50,7 +52,7 @@ def number_to_name(number):
     Returns:
         str: The corresponding name for the choice,
         or "Invalid Input" if the input is invalid.
-   """
+    """
     if number == 0:
         return 'Rock'
     elif number == 1:
@@ -99,10 +101,10 @@ def detailed_feedback(player_choice, comp_choice, outcome):
         comp_choice (str): The computer's choice
         (e.g., "Rock", "Spock", "Paper", "Lizard", "Scissors").
         outcome (str): The outcome of the round ("tie",
-                      "player", or "computer").
+                       "player", or "computer").
     Returns:
         str: A detailed feedback message explaining the outcome.
-   """
+    """
     if outcome == 'tie':
         return f'Both chose {player_choice.capitalize()}.'
     elif outcome == 'player':
@@ -155,7 +157,6 @@ def game_mechanics(player_choice, player_score, computer_score):
         outcome = "computer"
         computer_score += 1
         print("Computer wins!")
-        print(random.choice(taunts))
     else:
         outcome = "player"
         player_score += 1
@@ -164,6 +165,7 @@ def game_mechanics(player_choice, player_score, computer_score):
 
     result_message = detailed_feedback(player_choice, comp_choice, outcome)
     print(result_message)
+    print(random.choice(taunts))
 
     return player_score, computer_score
 
@@ -179,11 +181,13 @@ def main():
         computer_score = 0
 
         print("Welcome to Rock-Paper-Scissors-Lizard-Spock!")
-        rounds = input("How many rounds would you like to play? Best of: ")
+        rounds = input("How many rounds would you like to play?"
+                       "Type a number and hit enter. Best of: ")
 
         while not rounds.isdigit() or not (1 <= int(rounds) <= 25):
             print("Please enter a number between 1 and 25.")
-            rounds = input("How many rounds would you like to play? Best of: ")
+            rounds = input("How many rounds would you like to play? "
+                           "Type a number and hit enter. Best of: ")
 
         rounds = int(rounds)
         required_wins = (rounds // 2) + 1
@@ -191,7 +195,7 @@ def main():
         while player_score < required_wins and computer_score < required_wins:
             player_choice = input(
                 "\nEnter your choice (Rock, Spock, Paper, Lizard, Scissors) "
-                "or type 'exit' to quit the game: "
+                "and hit enter. Or type 'exit' to quit the game: "
             ).strip().lower()
             if player_choice in ['exit', 'quit']:
                 print(
@@ -236,7 +240,7 @@ def main():
     print(
         "\nThank you for playing my Rock, Paper, Scissors, Lizard, Spock "
         "game.\nIf you want to check out some of my other work visit: "
-        "https://github.com/DamianGillessen1989\nLive long, and Prosper.\n"
+        "https://github.com/DamianGillessen1989\nLive long, and Prosper 🖖\n"
     )
 
 

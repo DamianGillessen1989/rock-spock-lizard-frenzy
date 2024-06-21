@@ -78,7 +78,7 @@ During the development phase, a detailed logic flow was developed.
 
 This logic flow is a useful blueprint for understanding the program flow and the user journey. Iterative modifications were made during development to improve the user experience and address usability issues.
 
-![Flow Chart](https://github.com/DamianGillessen1989/rock-spock-lizard-frenzy/blob/main/assets/images/rock-spock-lizard-frenzy-flow-chart.png)!
+![Flow Chart](https://github.com/DamianGillessen1989/rock-spock-lizard-frenzy/blob/main/assets/images/rock-spock-lizard-frenzy-flow-chart.png)
 
 ### Features Present:
 
@@ -108,6 +108,7 @@ This logic flow is a useful blueprint for understanding the program flow and the
 ### Styling and Design Elements:
 
 - [CI Python Essentials Template](https://github.com/Code-Institute-Org/python-essentials-template) - Provides all the necessary files for the program to be presented nicely in Heroku.
+- [Balsamiq](https://balsamiq.cloud/) - Used for creating the logic flow-chart for the game/program to help plan the project.
 
 ### Development and Testing Utilities:
 
@@ -271,6 +272,8 @@ The live link can be found here - [https://rock-spock-lizard-frenzy-fd1c0328cc20
 ### Development Tools and Frameworks
 
 - [**Python**](https://en.wikipedia.org/wiki/Python_(programming_language)) - this program was developed fully using Python3.
+- [**Balsamiq**](https://balsamiq.cloud/) - Used for creating the logic flow-chart for the game/program to help plan the project.
+
 
 ### Development and Testing Utilities
 

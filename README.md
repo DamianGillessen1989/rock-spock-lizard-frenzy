@@ -72,25 +72,11 @@ Taking a systematic approach to my project management, I decided to divide the d
 
 During the development phase of this project, careful attention was given to creating game-logic that would be engaging and easy-to-understand for all users:
 
-#### Colour Scheme:
-
-N/A
-
-As Rock Spock Lizard Frenzy is a command line Python program/game, things like colour scheme or brand design were not a factor for this project.
-
-#### Typography:
-
-N/A
-
 ### Blueprint
 
 During the development phase, a detailed logic flow was developed. 
 
 This logic flow is a useful blueprint for understanding the program flow and the user journey. Iterative modifications were made during development to improve the user experience and address usability issues.
-
-### Site Structure
-
-N/A
 
 ### Features Present:
 

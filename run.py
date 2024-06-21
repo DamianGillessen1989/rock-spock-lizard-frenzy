@@ -181,7 +181,7 @@ def main():
         computer_score = 0
 
         print("Welcome to Rock-Paper-Scissors-Lizard-Spock!")
-        rounds = input("How many rounds would you like to play?"
+        rounds = input("How many rounds would you like to play? "
                        "Type a number and hit enter. Best of: ")
 
         while not rounds.isdigit() or not (1 <= int(rounds) <= 25):

@@ -95,15 +95,15 @@ N/A
 ### Features Present:
 
 - Welcome message - The welcome message and request from user for a set number of rounds to play is presented when the program starts.
-![Welcome message](https://raw.githubusercontent.com/DamianGillessen1989/)!
+![Welcome message](https://github.com/DamianGillessen1989/rock-spock-lizard-frenzy/blob/main/assets/images/welcome-message.png)!
 - Players' choice - once the game has started and user has selected a set number of rounds to play, the game then asks the user to make a choice between Rock, Paper, Scissors, Lizard, or Spock.
-![Player Choice](https://raw.githubusercontent.com/DamianGillessen1989/)
+![Player Choice](https://github.com/DamianGillessen1989/rock-spock-lizard-frenzy/blob/main/assets/images/player-choice.png)
 - Game flow - The game then follows the usual Rock Paper Scissors Lizard Spock rules and presents the player with a fun string of informational replies. The player is then requested for their next choice, if necessary. Player and computer scores are presented.
-![Game Process](https://raw.githubusercontent.com/DamianGillessen1989/)
+![Game Process](https://github.com/DamianGillessen1989/rock-spock-lizard-frenzy/blob/main/assets/images/game-process.png)
 - Final Scores - Once the set number of rounds is completed the 'final score' is presented to the user and they are then asked if they want to play again.
-![Final Scores](https://raw.githubusercontent.com/DamianGillessen1989/)
+![Final Scores](https://github.com/DamianGillessen1989/rock-spock-lizard-frenzy/blob/main/assets/images/final-scores.png)
 - Goodbye message - Once the user selects 'no' and decides to discontinue the program, they then are presented with a goodbye message and a link to my other projects.
-![Goodbye Message](https://raw.githubusercontent.com/DamianGillessen1989/)
+![Goodbye Message](https://github.com/DamianGillessen1989/rock-spock-lizard-frenzy/blob/main/assets/images/goodbye-message.png)
 
 ### Features to Implement:
 
@@ -219,9 +219,9 @@ After completing this rigorous validator testing, I was able to identify and cor
 
 Several issues were identified and rectified during the Rock Spock Lizard Frenzy program construction process with hopes to optimise operation and improve user experience.
 
-- Initially, when the program was run, the user was getting duplicate win/loss notifications. To fix this issue, I located and removed the duplicate code that was responsible for the unneccessary win/loss message. [Dup win/loss bug image](https://raw.githubusercontent.com/DamianGillessen1989/) - [Dup win/loss bug image two](https://raw.githubusercontent.com/DamianGillessen1989/)
+- Initially, when the program was run, the user was getting duplicate win/loss notifications. To fix this issue, I located and removed the duplicate code that was responsible for the unneccessary win/loss message. [Dup win/loss bug image](https://github.com/DamianGillessen1989/rock-spock-lizard-frenzy/blob/main/assets/images/duplicate-win-notification-bug.png) - [Dup win/loss bug image two](https://github.com/DamianGillessen1989/rock-spock-lizard-frenzy/blob/main/assets/images/duplicate-win-notification-bug-two.png)
 
-- An issue arose with the 'best of x rounds' function - if a user entered the wrong format of reply in the terminal, in this case an integer, the program crashed and the user saw a convaluted error message. To fix it I added the feature indicating to the player their reply needs to be an integer. This took a couple of attempts to fix, see the two error messages here: [Best of rounds bug image one](https://raw.githubusercontent.com/DamianGillessen1989/) - [Best of rounds bug image two](https://raw.githubusercontent.com/DamianGillessen1989/)
+- An issue arose with the 'best of x rounds' function - if a user entered the wrong format of reply in the terminal, in this case an integer, the program crashed and the user saw a convaluted error message. To fix it I added the feature indicating to the player their reply needs to be an integer. This took a couple of attempts to fix, see the two error messages here: [Best of rounds bug image one](https://github.com/DamianGillessen1989/rock-spock-lizard-frenzy/blob/main/assets/images/best-of-rounds-bug.png) - [Best of rounds bug image two](https://github.com/DamianGillessen1989/rock-spock-lizard-frenzy/blob/main/assets/images/best-of-rounds-two-bug.png)
 
 ### Unresolved Bugs
 

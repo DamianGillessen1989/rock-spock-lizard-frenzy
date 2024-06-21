@@ -1,6 +1,7 @@
 # This code is based on the code by EricPPeterson on GitHub
 
 import random
+import os
 
 encouragements = [
     "Great job!",
@@ -197,11 +198,12 @@ def main():
                 "\nEnter your choice (Rock, Spock, Paper, Lizard, Scissors) "
                 "and hit enter. Or type 'exit' to quit the game: "
             ).strip().lower()
+            os.system('cls' if os.name == 'nt' else 'clear')
             if player_choice in ['exit', 'quit']:
                 print(
                     "\nThank you for playing my Rock, Paper, Scissors, Lizard,"
-                    " Spock game.\nIf you want to check out some of my other "
-                    "work visit: https://github.com/DamianGillessen1989\nLive "
+                    " Spock game.\n\nIf you want to check out some of my other "
+                    "work visit: https://github.com/DamianGillessen1989\n\nLive "
                     "long, and Prosper 🖖\n"
                 )
                 return
@@ -233,11 +235,12 @@ def main():
 
         while True:
             play_again = input("Do you want to play again? (yes/no): ").strip().lower()
+            os.system('cls' if os.name == 'nt' else 'clear')
             if play_again in ['yes', 'y']:
                 break
             elif play_again in ['no', 'n']:
                 print(
-                    "\n\nThank you for playing my Rock, Paper, Scissors, Lizard, Spock "
+                    "\nThank you for playing my Rock, Paper, Scissors, Lizard, Spock "
                     "game.\n\nIf you want to check out some of my other work visit: "
                     "https://github.com/DamianGillessen1989\n\nLive long, and Prosper 🖖\n"
                 )

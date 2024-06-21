@@ -78,6 +78,8 @@ During the development phase, a detailed logic flow was developed.
 
 This logic flow is a useful blueprint for understanding the program flow and the user journey. Iterative modifications were made during development to improve the user experience and address usability issues.
 
+![Flow Chart](https://github.com/DamianGillessen1989/rock-spock-lizard-frenzy/blob/main/assets/images/rock-spock-lizard-frenzy-flow-chart.png)!
+
 ### Features Present:
 
 - Welcome message - The welcome message and request from user for a set number of rounds to play is presented when the program starts.

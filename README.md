@@ -191,11 +191,11 @@ I conducted testing using the PEP8 Python Validator to ensure the validity and a
 
 1. PEP8 Python Validator: The Python code was validated using the PEP8 Python Validator, which looked for missing components, syntactical errors, and Python standard conformance.
 - PEP8 Python Validator Test Results
-![PEP8 Python Validator test results](https://raw.githubusercontent.com/DamianGillessen1989/)
+![PEP8 Python Validator test results](https://github.com/DamianGillessen1989/rock-spock-lizard-frenzy/blob/main/assets/images/pep8-validator.png)
 
 2. ExtendsClass Python syntax checker: I also used the ExtendsClass Python syntax checker to ensure the python code was correct and compliant with Python standards.
 - ExtendsClass Python syntax checker Test Results
-![ExtendsClass Python syntax checker test results](https://raw.githubusercontent.com/DamianGillessen1989/)
+![ExtendsClass Python syntax checker test results](https://github.com/DamianGillessen1989/rock-spock-lizard-frenzy/blob/main/assets/images/extends-class.png)
 
 After completing this rigorous validator testing, I was able to identify and correct any coding errors, accessibility concerns, or performance issues, hopefully resulting in a compliant, user-friendly, and high-performing website.
 

@@ -134,17 +134,17 @@ def game_mechanics(player_choice, player_score, computer_score):
     player_choice = player_choice.strip().lower()
 
     print()
-    print("Player chooses", player_choice.capitalize())
+    print("\nPlayer chooses", player_choice.capitalize())
     player_number = name_to_number(player_choice)
 
     if player_number == -1:
-        print("Invalid player choice. Game cannot proceed.")
+        print("Invalid player choice. Game cannot proceed.\n")
         return player_score, computer_score
 
     comp_number = random.randrange(0, 5)
     comp_choice = number_to_name(comp_number)
 
-    print("Computer chooses", comp_choice)
+    print("\nComputer chooses", comp_choice),
 
     diff = (comp_number - player_number) % 5
 
@@ -152,20 +152,20 @@ def game_mechanics(player_choice, player_score, computer_score):
 
     if diff == 0:
         outcome = "tie"
-        print("It's a tie!")
+        print("\nIt's a tie!\n\n")
     elif diff in [1, 2]:
         outcome = "computer"
         computer_score += 1
-        print("Computer wins!")
+        print("\nComputer wins!\n\n")
+        print(random.choice(taunts), "\n")
     else:
         outcome = "player"
         player_score += 1
-        print("Player wins!")
-        print(random.choice(encouragements))
+        print("\n\nPlayer wins!\n\n")
+        print(random.choice(encouragements), "\n")
 
     result_message = detailed_feedback(player_choice, comp_choice, outcome)
     print(result_message)
-    print(random.choice(taunts))
 
     return player_score, computer_score
 
@@ -180,12 +180,12 @@ def main():
         player_score = 0
         computer_score = 0
 
-        print("Welcome to Rock-Paper-Scissors-Lizard-Spock!")
+        print("Welcome to Rock-Paper-Scissors-Lizard-Spock!\n")
         rounds = input("How many rounds would you like to play? "
                        "Type a number and hit enter. Best of: ")
 
         while not rounds.isdigit() or not (1 <= int(rounds) <= 25):
-            print("Please enter a number between 1 and 25.")
+            print("Please enter a number between 1 and 25.\n")
             rounds = input("How many rounds would you like to play? "
                            "Type a number and hit enter. Best of: ")
 
@@ -202,7 +202,7 @@ def main():
                     "\nThank you for playing my Rock, Paper, Scissors, Lizard,"
                     " Spock game.\nIf you want to check out some of my other "
                     "work visit: https://github.com/DamianGillessen1989\nLive "
-                    "long, and Prosper.\n"
+                    "long, and Prosper 🖖\n"
                 )
                 return
             if player_choice in choices:
@@ -212,36 +212,38 @@ def main():
             else:
                 print(
                     "Invalid input. Please enter a valid choice like 'Spock'. "
-                    "And check your spelling!"
+                    "And check your spelling!\n"
                 )
 
             print(
-                "\nCurrent Scores - Player: {}, Computer: {}".format(
+                "\nCurrent Scores - Player: {}, Computer: {}\n".format(
                     player_score, computer_score
                 )
             )
 
         print(
-            "\nFinal Scores - Player: {}, Computer: {}".format(
+            "\nFinal Scores - Player: {}, Computer: {}\n".format(
                 player_score, computer_score
             )
         )
         if player_score > computer_score:
-            print("Congratulations! You won the game!")
+            print("Congratulations! You won the game!\n")
         else:
-            print("Computer wins the game! Better luck next time!")
+            print("Computer wins the game! Better luck next time!\n")
 
-        play_again = input(
-            "Do you want to play again? (yes/no): "
-        ).strip().lower()
-        if play_again not in ['yes', 'y']:
-            break
-
-    print(
-        "\nThank you for playing my Rock, Paper, Scissors, Lizard, Spock "
-        "game.\nIf you want to check out some of my other work visit: "
-        "https://github.com/DamianGillessen1989\nLive long, and Prosper 🖖\n"
-    )
+        while True:
+            play_again = input("Do you want to play again? (yes/no): ").strip().lower()
+            if play_again in ['yes', 'y']:
+                break
+            elif play_again in ['no', 'n']:
+                print(
+                    "\n\nThank you for playing my Rock, Paper, Scissors, Lizard, Spock "
+                    "game.\n\nIf you want to check out some of my other work visit: "
+                    "https://github.com/DamianGillessen1989\n\nLive long, and Prosper 🖖\n"
+                )
+                return
+            else:
+                print("Please enter 'yes' or 'no'.")
 
 
 if __name__ == "__main__":

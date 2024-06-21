@@ -202,9 +202,9 @@ def main():
             if player_choice in ['exit', 'quit']:
                 print(
                     "\nThank you for playing my Rock, Paper, Scissors, Lizard,"
-                    " Spock game.\n\nIf you want to check out some of my other "
-                    "work visit: https://github.com/DamianGillessen1989\n\nLive "
-                    "long, and Prosper 🖖\n"
+                    " Spock game.\n\nIf you want to check out some of my other"
+                    " work visit: https://github.com/DamianGillessen1989\n\n"
+                    "Live long, and Prosper 🖖\n"
                 )
                 return
             if player_choice in choices:
@@ -234,15 +234,17 @@ def main():
             print("Computer wins the game! Better luck next time!\n")
 
         while True:
-            play_again = input("Do you want to play again? (yes/no): ").strip().lower()
+            play_again = input
+            ("Do you want to play again? (yes/no): ").strip().lower()
             os.system('cls' if os.name == 'nt' else 'clear')
             if play_again in ['yes', 'y']:
                 break
             elif play_again in ['no', 'n']:
                 print(
-                    "\nThank you for playing my Rock, Paper, Scissors, Lizard, Spock "
-                    "game.\n\nIf you want to check out some of my other work visit: "
-                    "https://github.com/DamianGillessen1989\n\nLive long, and Prosper 🖖\n"
+                    "\nThank you for playing my Rock, Paper, Scissors, Lizard,"
+                    " Spock game.\n\nIf you want to check out some of my other"
+                    " work visit: https://github.com/DamianGillessen1989\n\n"
+                    "Live long, and Prosper 🖖\n"
                 )
                 return
             else:
